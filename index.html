@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckyBear (Лаки Бир) Casino - Официальное казино</title>
+    <!-- ДОБАВЛЕНИЕ ИКОНКИ САЙТА (FAVICON) -->
+    <!-- 1. Стандартный favicon (рекомендуется формат ICO или PNG 32x32) -->
+    <!-- ВАЖНО: Замените 'favicon.png' на путь к вашему файлу (например, 'images/favicon.png') -->
+    <link rel="icon" type="image/png" href="logo — копия.png"> 
+    <!-- 2. Обработка старых браузеров (используется обычно .ico) -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104383158', 'ym');
+
+    ym(104383158, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104383158" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+ы
+
+   <style>
+        /* --- Шрифты и глобальные переменные --- */
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
+
+        
+        :root {
+            --bg-dark: #0a0b10;
+            --bg-grid: #13151c;
+            --bg-card: #1c1f2b;
+            --text-light: #ffffff;
+            --text-secondary: #a7a9be;
+            --glow-color: rgba(74, 144, 226, 0.4);
+            --button-gradient-start: #4A90E2;
+            --button-gradient-end: #5A58E1;
+            --button-gradient-hover-start: #6a9de9;
+            --button-gradient-hover-end: #7a79e9;
+            --border-color: #2a2e3f;
+            --border-accent: #3b425b;
+            /* Новые градиенты для обводки изображения */
+            --image-border-gradient-start: #4A90E2; /* Светло-синий */
+    --image-border-gradient-end: #5A58E1;   /* Сине-фиолетовый */
+    --image-border-shadow-color: rgba(90, 88, 225, 0.6); /* Тень для свечения */
+
+    
+        }
+
+        /* --- Базовые стили --- */
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 800;
+        }
+        
+        /* --- Шапка сайта (Header) --- */
+        .header {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background-color: rgba(10, 11, 16, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .logo img {
+            height: 36px;
+            object-fit: contain;
+        }
+        .logo.header-logo span {
+             display: none;
+        }
+
+        .nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--text-light);
+        }
+        
+        .btn {
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .btn-gradient-blue {
+            background: linear-gradient(135deg, var(--button-gradient-start), var(--button-gradient-end));
+            color: var(--text-light);
+            border: none;
+        }
+        
+        .btn-gradient-blue:hover {
+            background: linear-gradient(135deg, var(--button-gradient-hover-start), var(--button-gradient-hover-end));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border-accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-card);
+            transform: translateY(-2px);
+        }
+
+        /* --- Секция Hero --- */
+        .hero {
+            padding: 100px 0 120px;
+            text-align: center;
+            background-color: var(--bg-grid);
+            background-image:
+                linear-gradient(rgba(26, 27, 35, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(26, 27, 35, 0.4) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .hero-main-logo {
+            margin-bottom: 40px;
+        }
+        .hero-main-logo img {
+            max-width: 250px;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* --- Общие стили для секций --- */
+        .features, .games {
+            padding: 80px 0;
+            background-color: var(--bg-dark);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .features-grid, .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- Стили карточек особенностей --- */
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-accent);
+            box-shadow: 0 0 15px -5px var(--glow-color);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, opacity 0.4s ease-out;
+        }
+
+        .feature-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px 0px var(--glow-color);
+        }
+        
+        .feature-card .icon {
+            font-size: 2.8rem;
+            color: var(--button-gradient-start);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ======================================================= */
+        /* ========= НОВЫЕ СТИЛИ ДЛЯ КАРТОЧЕК ИГР ========= */
+        /* ======================================================= */
+
+        .game-card {
+            background-color: var(--bg-card); /* Фон карточки */
+            border-radius: 16px; 
+            padding: 30px; 
+            text-align: center;
+            box-shadow: 0 0 15px -5px rgba(0,0,0,0.3); /* Общая тень для карточки */
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, opacity 0.4s ease-out;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .game-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px 0px rgba(0,0,0,0.5); /* Более выраженная тень при наведении */
+        }
+
+        .game-card .game-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 18px; /* Скругление обводки */
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            position: relative; /* Для псевдоэлементов обводки */
+            padding: 3px; /* Отступ для видимости рамки */
+            background: linear-gradient(135deg, var(--image-border-gradient-start), var(--image-border-gradient-end)); /* Градиент для рамки */
+            box-shadow: 0 0 10px 2px var(--image-border-shadow-color); /* Свечение рамки */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .game-card:hover .game-image {
+            box-shadow: 0 0 15px 4px var(--image-border-shadow-color); /* Усиленное свечение при наведении */
+            transform: scale(1.03); /* Немного увеличиваем изображение при наведении */
+        }
+
+        .game-card .game-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px; /* Скругление самой картинки внутри обводки */
+            display: block; /* Убираем лишние отступы */
+        }
+
+        .game-card h3 {
+            font-size: 1.4rem;
+        }
+        
+        .game-card p {
+            color: var(--text-secondary);
+            margin: 10px 0 25px;
+            flex-grow: 1; /* Растягиваем параграф, чтобы кнопка всегда была внизу */
+        }
+
+        /* --- НОВЫЕ СТИЛИ ДЛЯ КНОПОК ИГР --- */
+        .btn-game {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            background: linear-gradient(135deg, #f46b3b, #d9542a);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(244, 107, 59, 0.2);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-game svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+        .btn-game:hover {
+            background: linear-gradient(135deg, #ff804e, #eb6237);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(244, 107, 59, 0.3);
+        }
+        .btn-game:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* --- Футер (Footer) --- */
+        .footer {
+            background-color: var(--bg-grid);
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer .logo {
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .footer .logo img {
+            height: 40px;
+        }
+
+        .footer p, .footer-links a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        .footer-links {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 35px;
+        }
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            .header .nav { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .hero-buttons { flex-direction: column; gap: 15px; }
+            .section-title { font-size: 1.8rem; margin-bottom: 40px; }
+            .feature-card, .game-card { padding: 25px; } /* Адаптируем внутренний контейнер */
+            .feature-card h3, .game-card h3 { font-size: 1.4rem; }
+            .game-card h3 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="logo header-logo">
+                <img src="logo.png" alt="LuckyBear Logo"> 
+                <span>LuckyBear</span>
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#games">Игры</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-gradient-blue">Войти</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-main-logo">
+                    <img src="work.png" alt="LuckyBear Main Logo">
+                </div>
+                <h1>Добро пожаловать в LuckyBear Casino</h1>
+                <p class="subtitle">Официальное онлайн казино LuckyBear (Лаки Бир) – ваш путь к удаче! Получите бонус до 360% + 200 фриспинов!</p>
+                <div class="hero-buttons">
+                    <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-gradient-blue">Играть сейчас</a>
+                    <a href="#games" class="btn btn-secondary">Посмотреть игры</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games">
+            <div class="container">
+                <h2 class="section-title">Выберите свою любимую игру</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-image"><img src="tapi.jpg" alt="Tapiniata"></div>
+                        <h3>Tapiniata</h3>
+                        <p>Разбейте яркую пиньяту одним кликом и сорвите куш! Каждый удар скрывает в себе сокровища, фриспины или даже джекпот. Сколько призов достанется вам?</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-image"><img src="avia.jpg" alt="Aviamaster"></div>
+                        <h3>Aviamaster</h3>
+                        <p>Следите за взлетом самолета и забирайте выигрыш, пока он не улетел! Чем дольше полет — тем выше множитель. Проверьте свою интуицию и станьте мастером авиации!</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-image"><img src="towers.jpg" alt="Towers"></div>
+                        <h3>Towers</h3>
+                        <p>Поднимайтесь к вершине богатства, этаж за этажом! Каждый шаг вверх увеличивает ваш приз, но остерегайтесь ловушек. Как высоко вы осмелитесь подняться?</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-image"><img src="pump.jpg" alt="PumpedX"></div>
+                        <h3>PumpedX</h3>
+                        <p>Накачайте свои множители до предела! Удерживайте кнопку, чтобы ваш персонаж становился сильнее, а выигрыш — больше. Поймайте идеальный момент для максимальной прибыли!</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-image"><img src="mines.jpg" alt="Mines"></div>
+                        <h3>Mines</h3>
+                        <p>Испытайте свою удачу на минном поле! Открывайте ячейки одну за другой, чтобы найти спрятанные алмазы и увеличить выигрыш. Главное — не наткнуться на мину!</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-image"><img src="rings.jpg" alt="Rings of Olympus"></div>
+                        <h3>Rings of Olympus</h3>
+                        <p>Войдите в чертоги богов Олимпа! Могущественный Зевс и другие божества готовы одарить вас колоссальными множителями. Соберите кольца Олимпа и заберите божественный выигрыш!</p>
+                        <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg" class="btn btn-game">
+                            <span>ИГРАТЬ</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают LuckyBear Casino?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">🎁</div>
+                        <h3>Бонус 500%</h3>
+                        <p>Получите приветственный бонус до 500% на депозит. Увеличьте свой банкролл с первого депозита!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⚡️</div>
+                        <h3>Моментальные выплаты</h3>
+                        <p>LuckyBear гарантирует быстрые выплаты. Ваши выигрыши поступят на счет мгновенно!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎮</div>
+                        <h3>100+ игр</h3>
+                        <p>Огромная коллекция слотов, Live казино и других игр от топ провайдеров. Найдите свою удачу!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🛡️</div>
+                        <h3>Безопасность</h3>
+                        <p>Лицензированное казино с SSL-шифрованием. Ваши данные и средства под надежной защитой!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">👑</div>
+                        <h3>VIP программа</h3>
+                        <p>Эксклюзивная VIP программа с персональным менеджером и кэшбэком до 20%.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📱</div>
+                        <h3>Мобильная версия</h3>
+                        <p>Играйте в LuckyBear на любом устройстве! Адаптивный дизайн и приложение для iOS и Android.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="LuckyBear Logo">
+                <span>Лаки Бир</span>
+            </a>
+            <p>Играйте ответственно. Только для лиц старше 18 лет.</p>
+            <div class="footer-links">
+                <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg">Слоты</a>
+                <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg">Live Casino</a>
+                <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg">Бонусы</a>
+                <a href="https://t.me/Lucky_Bear_Bars_Bot/app?startapp=bXN0PTB4MWFhNmJiYTFkJm09Uml6eiZjPXNpdGVsYg">VIP программа</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 LuckyBear Casino (Лаки Бир). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+
+ 
+    <script>
+        // JS для плавной прокрутки по якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // JS для анимации появления элементов при скролле
+        const animatedItems = document.querySelectorAll('.game-card, .feature-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        animatedItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+
+</body>
+</html>
